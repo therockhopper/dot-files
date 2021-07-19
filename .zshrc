@@ -70,7 +70,7 @@ export FZF_BASE=~/.fzf
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx vi-mode git-prompt zsh-syntax-highlighting)
+plugins=(git osx git-prompt zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -118,7 +118,7 @@ alias platform="cd ~/Documents/wayne-world/assessment-platform && ls -la"
 alias mra="cd ~/Documents/wayne-world/mra && ls -la"
 alias mra-api="cd ~/Documents/wayne-world/mra-api && ls -la"
 alias la="cd ~/Documents/wayne-world/leadership-academy && ls -la"
-alias gbs="cd ~/Documents/wayne-world/gbs && ls -la"
+alias gss="cd ~/Documents/GSS/GSS-CA && ls -la"
 alias lad="cd ~/Documents/wayne-world/LAD && ls -la"
 
 # Codi
