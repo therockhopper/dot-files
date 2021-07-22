@@ -1,12 +1,15 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Executes commands at the start of an interactive session.
 #
-# # Set fzf installation directory path
-export FZF_BASE=~/.fzf
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
 
-source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
-# User configuration
+# Customize to your needs...
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH=$PATH:~/Documents/Sdks/connectiq-sdk/bin
@@ -48,6 +51,8 @@ if [ -f '/home/meatwad/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/meatwad/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/meatwad/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
+# Set fzf installation directory path
+export FZF_BASE=~/.fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH=$PATH:~/.android-sdk-macosx/platform-tools/
