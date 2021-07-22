@@ -400,7 +400,7 @@ Plug 'lepture/vim-jinja'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
-Plug 'dense-analysis/ale'
+Plug 'iamcco/markdown-preview.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'leafgarland/typescript-vim'
@@ -408,7 +408,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'tmhedberg/SimpylFold'
 Plug 'nvie/vim-flake8'
 Plug 'Yggdroot/indentLine'
-Plug 'metakirby5/codi.vim' " live REPL in js,python,node
+Plug 'codota/tabnine-vim' " AI tab completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Initialize plugin system
