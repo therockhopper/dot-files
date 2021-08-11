@@ -391,25 +391,22 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.vim/plugged')
 
 Plug 'benmills/vimux'
-Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator' " tmux navigation bindings with vim
+Plug 'edkolev/tmuxline.vim' " better status line for tmux
+Plug 'bling/vim-airline' " tmux bottom nav
+Plug 'vim-airline/vim-airline-themes' " tmux design
+Plug 'arcticicestudio/nord-vim' " style
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'mileszs/ack.vim'
-Plug 'tpope/vim-vinegar'
-Plug 'lepture/vim-jinja'
-Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'arcticicestudio/nord-vim'
-Plug 'iamcco/markdown-preview.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'posva/vim-vue'
-Plug 'leafgarland/typescript-vim'
-Plug 'edkolev/tmuxline.vim'
-Plug 'tmhedberg/SimpylFold'
-Plug 'nvie/vim-flake8'
-Plug 'Yggdroot/indentLine'
+Plug 'junegunn/fzf.vim' " fuzy search
+Plug 'tpope/vim-vinegar' " imporove netrw
+Plug 'mileszs/ack.vim' " Pearl serach
+Plug 'iamcco/markdown-preview.vim' " preview markdown files in browser as you type
+Plug 'pangloss/vim-javascript' " JS Support
+Plug 'posva/vim-vue' " VUE Support
+Plug 'leafgarland/typescript-vim' " TS support for vim
+Plug 'tmhedberg/SimpylFold' " Better folding of code
 Plug 'codota/tabnine-vim' " AI tab completion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dense-analysis/ale' " Async linting
 
 " Initialize plugin system
 call plug#end()
@@ -426,13 +423,9 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 let g:ale_linter_aliases = {'vue': ['vue', 'javascript']}
 
-let g:ale_linters = {'javascript': ['']}
-
-" Fix JS files with prettier-standard.
 let g:ale_fixers = {
-\   'javascript': ['standard', 'trim_whitespace', 'remove_trailing_lines'],
-\   'typescript': ['standard', 'eslint', 'trim_whitespace', 'remove_trailing_lines'],
-\   'vue': ['standard',  'trim_whitespace', 'remove_trailing_lines'],
+\   'javascript': ['prettier'],
+\   'css': ['prettier'],
 \}
 
 " Set this variable to 1 to fix files when you save them.
